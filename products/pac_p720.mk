@@ -14,6 +14,10 @@ $(shell cp -f vendor/pac/overlay/pac/lge/hdpi/frameworks/base/core/res/assets/im
 PRODUCT_COPY_FILES += \
         vendor/pac/overlay/pac/lge/hdpi/system/media/bootanimation.zip:system/media/bootanimation.zip
 
+# ParanoidAndroid packages [Upstream PACman doesn't include them]
+PRODUCT_PACKAGES += \
+    ParanoidWallpapers
+
 # include ParanoidAndroid common configuration
 include vendor/pac/config/pac_common.mk
 
