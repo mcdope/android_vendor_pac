@@ -10,6 +10,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pac/overlay/aokp/device/p720
 # PAC device overlay
 $(shell cp -f vendor/pac/overlay/pac/lge/hdpi/frameworks/base/core/res/assets/images/android-logo-mask.png frameworks/base/core/res/assets/images/android-logo-mask.png)
 
+# LGE ICS Bootanimation
+PRODUCT_COPY_FILES += \
+        vendor/pac/overlay/pac/lge/hdpi/system/media/bootanimation.zip:system/media/bootanimation.zip
+
 # include ParanoidAndroid common configuration
 include vendor/pac/config/pac_common.mk
 
