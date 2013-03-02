@@ -6,7 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Replace CM files
 PRODUCT_COPY_FILES += \
-    vendor/pac/prebuilt/common/apk/SuperSU.apk:system/app/SuperSU.apk \
+    vendor/pac/prebuilt/common/apk/Superuser.apk:system/app/Superuser.apk \
     vendor/pac/prebuilt/common/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk \
     vendor/pa/prebuilt/common/xbin/su:system/xbin/su
 
