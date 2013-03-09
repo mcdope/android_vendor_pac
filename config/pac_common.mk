@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/pac/prebuilt/common/apk/Superuser.apk:system/app/Superuser.apk \
     vendor/pac/prebuilt/common/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk \
-    vendor/pa/prebuilt/common/xbin/su:system/xbin/su
+    vendor/pac/prebuilt/common/xbin/su:system/xbin/su
 
 ### AOKP ###
 # AOKP Packages
