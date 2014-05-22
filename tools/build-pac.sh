@@ -235,3 +235,4 @@ tmin=$(( (t2-t1)/60 ))
 tsec=$(( (t2-t1)%60 ))
 
 echo -e ${bldgrn}"Total time elapsed:${txtrst} ${grn}$tmin minutes $tsec seconds"${txtrst}
+echo -e "The build completed at `date`\nTotal time elapsed: $tmin minutes $tsec seconds\nMD5: `cat out/target/product/yuga/*.md5sum`" | mail -s "Build done" tobiasbaeumer@gmail.com
