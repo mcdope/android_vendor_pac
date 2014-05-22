@@ -184,11 +184,7 @@ fi
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-if [ "$opt_olvl" -eq 3 ]; then
-	lunch "pac_$device-user";
-else
-	lunch "pac_$device-userdebug";
-fi
+lunch "pac_$device-userdebug";
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
