@@ -184,11 +184,11 @@ fi
 # lunch device
 echo -e ""
 echo -e ${bldblu}"Lunching device"${txtrst}
-if [ "$opt_olvl" -eq 3 ]; then
-	lunch "pac_$device-user";
-else
+#if [ "$opt_olvl" -eq 3 ]; then
+#	lunch "pac_$device-user";
+#else
 	lunch "pac_$device-userdebug";
-fi
+#fi
 
 echo -e ""
 echo -e ${bldblu}"Starting compilation"${txtrst}
@@ -239,3 +239,5 @@ tmin=$(( (t2-t1)/60 ))
 tsec=$(( (t2-t1)%60 ))
 
 echo -e ${bldgrn}"Total time elapsed:${txtrst} ${grn}$tmin minutes $tsec seconds"${txtrst}
+echo -e "The build completed at `date`\nTotal time elapsed: $tmin minutes $tsec seconds\nMD5: `cat out/target/product/yuga/*.md5sum`" | mail -s "Build done" tobiasbaeumer@gmail.com
+
