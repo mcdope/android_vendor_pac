@@ -7,6 +7,7 @@ usage()
     echo -e "  build-pac.sh [options] device"
     echo -e ""
     echo -e ${txtbld}"  Options:"${txtrst}
+    echo -e "    -a  Disable ADB authentication and set root access to Apps and ADB"
     echo -e "    -c# Cleaning options before build:"
     echo -e "        1 - make clean"
     echo -e "        2 - make dirty"
@@ -15,6 +16,7 @@ usage()
     echo -e "    -f  Fetch cherry-picks"
     echo -e "    -i  Static Initlogo"
     echo -e "    -j# Set jobs"
+    echo -e "    -r  Reset source tree before build"
     echo -e "    -s  Sync before build"
     echo -e "    -p  Build using pipe"
     echo -e "    -o# Select GCC O Level"
@@ -82,26 +84,30 @@ fi
 
 export USE_CCACHE=1
 
+opt_adb=0
 opt_clean=0
 opt_dex=0
 opt_fetch=0
 opt_initlogo=0
 opt_jobs="$CPUS"
-opt_sync=0
-opt_pipe=0
 opt_olvl=0
+opt_pipe=0
+opt_reset=0
+opt_sync=0
 opt_verbose=0
 
-while getopts "c:dfij:pso:v" opt; do
+while getopts "ac:dfij:o:prsv" opt; do
     case "$opt" in
+    a) opt_adb=1 ;;
     c) opt_clean="$OPTARG" ;;
     d) opt_dex=1 ;;
     f) opt_fetch=1 ;;
     i) opt_initlogo=1 ;;
     j) opt_jobs="$OPTARG" ;;
-    s) opt_sync=1 ;;
-    p) opt_pipe=1 ;;
     o) opt_olvl="$OPTARG" ;;
+    p) opt_pipe=1 ;;
+    r) opt_reset=1 ;;
+    s) opt_sync=1 ;;
     v) opt_verbose=1 ;;
     *) usage
     esac
@@ -142,10 +148,27 @@ elif [ "$opt_clean" -eq 3 ]; then
 fi
 
 # download prebuilt files
-if [ -x "vendor/cm/get-prebuilts" -a ! -d "vendor/cm/proprietary" ]; then
+date=`date '+%d'`
+if [ -x "vendor/cm/get-prebuilts" -a ! -d "vendor/cm/proprietary" ] || [ $date == 01 ] || [ $date == 15 ]; then
     echo -e ""
     echo -e ${bldblu}"Downloading prebuilts"${txtrst}
     vendor/cm/get-prebuilts
+    echo -e ""
+fi
+
+# Disable ADB authentication and set root access to Apps and ADB
+if [ "$opt_adb" -ne 0 ]; then
+    echo -e ""
+    echo -e ${bldblu}"Disabling ADB authentication and setting root access to Apps and ADB"${txtrst}
+    export DISABLE_ADB_AUTH=true
+    echo -e ""
+fi
+
+# reset source tree
+if [ "$opt_reset" -ne 0 ]; then
+    echo -e ""
+    echo -e ${bldblu}"Resetting source tree and removing all uncommitted changes"${txtrst}
+    repo forall -c "git reset --hard HEAD; git clean -qf"
     echo -e ""
 fi
 
