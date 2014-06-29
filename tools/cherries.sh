@@ -35,11 +35,27 @@ case $device in
         # native patch
         cherries+=(1163_PAC)
     ;;
+    s2ve)
+        # av patch
+        cherries+=(2981_PAC)
+        # native patch
+        cherries+=(2983_PAC)
+    ;;
+    s2vep)
+        # av patch
+        cherries+=(2981_PAC)
+        # native patch
+        cherries+=(2983_PAC)
+    ;;
     p705)
         #libstagefright: Add support for custom LPA buffer size in legacy LPAPlayer
         cherries+=(1343_PAC)
         # Allow using Classic WebView
         cherries+=(56054_CM)
+    ;;
+    nozomi)
+        #FwNative: Bootlogo and screenshot fix for Xperia S
+        cherries+=(3018_PAC)
     ;;
     ariesve)
         #hwc: Blank and unblank primary on first boot
