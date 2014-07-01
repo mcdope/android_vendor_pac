@@ -16,6 +16,8 @@ add_lunch_combo pac_tf701t-userdebug
 add_lunch_combo pac_acclaim-userdebug
 add_lunch_combo pac_encore-userdebug
 add_lunch_combo pac_ovation-userdebug
+# HP
+add_lunch_combo pac_tenderloin-userdebug
 # HTC
 add_lunch_combo pac_dlx-userbebug
 add_lunch_combo pac_fireball-userdebug
@@ -32,6 +34,9 @@ add_lunch_combo pac_m7vzw-userdebug
 add_lunch_combo pac_m8-userdebug
 add_lunch_combo pac_pyramid-userdebug
 add_lunch_combo pac_ruby-userdebug
+add_lunch_combo pac_t6-userdebug
+add_lunch_combo pac_t6spr-userdebug
+add_lunch_combo pac_t6vzw-userdebug
 add_lunch_combo pac_ville-userdebug
 add_lunch_combo pac_villec2-userdebug
 add_lunch_combo pac_vision-userdebug
