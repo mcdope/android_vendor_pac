@@ -92,6 +92,7 @@
   <device name="meliusltexx"/>
   <!--  <device name="mesmerizemtd"/> -->
   <device name="mint"/>
+  <device name="moto_msm8960_jbbl"/>
   <device name="moto_msm8960"/>
   <device name="moto_msm8960dt"/>
   <device name="n1"/>
@@ -156,7 +157,7 @@
   <device name="v500"/>
   <device name="venturi"/>
   <device name="ville"/>
-  <device name="villec2"/>
+  <!--<device name="villec2"/> -->
   <device name="vs920"/>
   <device name="vs980"/>
   <!-- <device name="ypg1"/> -->
