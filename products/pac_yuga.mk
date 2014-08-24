@@ -1,9 +1,6 @@
 # Check for target product
 ifeq (pac_yuga,$(TARGET_PRODUCT))
 
-# OVERLAY_TARGET adds overlay asset source
-OVERLAY_TARGET := pa_yuga
-
 # McDope's thermald config
 PRODUCT_COPY_FILES += \
 	vendor/pac/mcdope-sony-fusion3-thermald.conf:system/etc/thermald.conf
