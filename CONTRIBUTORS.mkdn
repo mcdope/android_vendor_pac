@@ -325,7 +325,7 @@ Sony:
 * __Xperia Tablet Z (pollux_windy) :__ bluefa1con
 * __Xperia V (tsubasa) :__ Abhinav1997
 * __Xperia Z (yuga) :__ jeroenqui, pvyParts
-* __Xperia Z1 (honami) :__ jeroenqui
+* __Xperia Z1 (honami) :__ jeroenqui, Langes
 * __Xperia Z1 Compact (amami) :__ oshmoun
 * __Xperia ZL (odin) :__ OPEN
 * __Xperia ZR (dogo) :__ OPEN
@@ -340,8 +340,8 @@ Sony Ericsson:
 * __Xperia Arc (anzu) :__ garwedgess, Langes
 * __Xperia Mini (smultron) :__ Langes
 * __Xperia Mini Pro (mango) :__ Langes, szl.kiev
-* __Xperia Neo (hallon) :__ OPEN
-* __Xperia Neo V (haida) :__ OPEN
+* __Xperia Neo (hallon) :__ Langes
+* __Xperia Neo V (haida) :__ Langes
 * __Xperia Pro (iyokan) :__ Langes
 * __Xperia Ray (urushi) :__ Langes, szl.kiev
 

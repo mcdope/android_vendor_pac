@@ -17,21 +17,24 @@
   <!-- Add new devices here -->
   <!-- <device name="acclaim"/> -->
   <!-- <device name="apexqtmo"/> -->
+  <device name="amami"/>
   <device name="bacon"/>
   <device name="d2lte"/>
   <!-- <device name="d801"/> -->
   <!-- <device name="deb"/> -->
   <device name="e980"/>
+  <device name="evita"/>
   <device name="expressatt"/>
   <!-- <device name="find5"/> -->
   <!-- <device name="flo"/> -->
   <device name="hammerhead"/>
   <!-- <device name="hlte"/> -->
+  <device name="honami"/>
   <!-- <device name="i605"/> -->
   <!-- <device name="i9100"/> -->
   <!-- <device name="i9100g"/> -->
   <!-- <device name="i9300"/> -->
-  <!-- <device name="i9305"/> -->
+  <device name="i9305"/>
   <!-- <device name="i9500"/> -->
   <!-- <device name="jem"/> -->
   <device name="jflte"/>
@@ -54,7 +57,7 @@
   <device name="p5100"/>
   <device name="p5110"/>
   <!-- <device name="r950"/> -->
-  <!-- <device name="ruby"/> -->
+  <device name="ruby"/>
   <!-- <device name="t0lte"/> -->
   <!-- <device name="t0lteatt"/> -->
   <!-- <device name="t0ltetmo"/> -->
