@@ -6,7 +6,7 @@
 export C=/tmp/backupdir
 export S=/system
 export V=4.4
-export cfg_file="/system/etc/init.d.cfg"
+export cfg_file="/data/local/init.d.cfg"
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -97,8 +97,8 @@ case "$1" in
         fi
     fi
     check_blacklist system
-    preserve_addon_d
     xposed_backup
+    preserve_addon_d
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
